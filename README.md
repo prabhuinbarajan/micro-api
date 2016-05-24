@@ -1,5 +1,9 @@
 # micro-api demo application
 
+[![Run Status](https://api.shippable.com/projects/574497362a8192902e214243/badge?branch=google-gcr-gke)](https://app.shippable.com/projects/574497362a8192902e214243)
+
+[![Coverage Badge](https://api.shippable.com/projects/574497362a8192902e214243/coverageBadge?branch=google-gcr-gke)](https://app.shippable.com/projects/574497362a8192902e214243)
+
 This is the back-end of a simple 2-tier app to demonstrate using Google Container Registry
 (GCR) and Google Container Engine (GKE) with Shippable.  To see the full functionality
 of the app, use the same steps to deploy the front-end of the app which is also
