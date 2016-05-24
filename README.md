@@ -25,7 +25,7 @@ on  called [micro-www](https://github.com/prabhuinbarajan/micro-www/tree/google-
 * Stores the test results and code coverage report
 * Upon successful CI build, pushes the newly built Docker image to Amazon Container Registry
 
-##### Environment variables required for pulling and pushing from GCR in shippable.yml:
+##### Environment variables required for pulling and pushing from ECR in shippable.yml:
 In the shippable.yml, you should't need to change any of the environment variables:
 - SERVICE=micro-api
 - PROJECT_ID=shippable-aws
