@@ -11,7 +11,7 @@ env:
     - PROJECT_ID=shippable-aws # Project ID for existing GCP project
     - REGISTRY_ACCOUNT=413045187232.dkr.ecr.us-west-2.amazonaws.com/$PROJECT_ID # image registry account name/location
     - XUNIT_FILE=./shippable/testresults/result.xml # location to store test results
-    - secure: h5rP6z6KrbGhTYxomqhx9Lt7MORu/t0XWbRapFX4DObsDVf18fcIW6irgf9iNXYNTSFDSvt+koTl1GuyAkRZevMECt7QS/5er2+xUJu3jNVATVi1L1lPZJF31/i0bsJEHR3Qs5wuwTb0Izlmm4HABxsu0+TduQtOF9tToCJo/OsPDMyTTQcAzFo4oMPn5kjAHeIs3T7xLqkk95pZyIvw/Y08XmZsU+canzU1SKXaeJVQjXK0s7jTnDYsWPs6kA+vxvNEaOXD8B9Wyg9xjggYGqJ+vIiCQl7KtXnVhz3dlcQnPYFg7bCdkIfIFqyIJY1blYaoIH5q0ZgQQnQHGyeoTg==
+    #- secure: h5rP6z6KrbGhTYxomqhx9Lt7MORu/t0XWbRapFX4DObsDVf18fcIW6irgf9iNXYNTSFDSvt+koTl1GuyAkRZevMECt7QS/5er2+xUJu3jNVATVi1L1lPZJF31/i0bsJEHR3Qs5wuwTb0Izlmm4HABxsu0+TduQtOF9tToCJo/OsPDMyTTQcAzFo4oMPn5kjAHeIs3T7xLqkk95pZyIvw/Y08XmZsU+canzU1SKXaeJVQjXK0s7jTnDYsWPs6kA+vxvNEaOXD8B9Wyg9xjggYGqJ+vIiCQl7KtXnVhz3dlcQnPYFg7bCdkIfIFqyIJY1blYaoIH5q0ZgQQnQHGyeoTg==
 build:
   pre_ci:
     - SUDO=$(which sudo) && $SUDO apt-get update -qq && $SUDO apt-get install -y python-dev
