@@ -37,10 +37,10 @@ build:
     - docker tag -f $REGISTRY_ACCOUNT/$SERVICE:latest $REGISTRY_ACCOUNT/$SERVICE:$BRANCH.$BUILD_NUMBER
     - docker push $REGISTRY_ACCOUNT/$SERVICE:$BRANCH.$BUILD_NUMBER
 
-after_failure:
-  - python slack_notifier.py --project $SERVICE --token $SLACK_TOKEN
-after_success:
-  - python slack_notifier.py --project $SERVICE --token $SLACK_TOKEN -s
+#after_failure:
+#  - python slack_notifier.py --project $SERVICE --token $SLACK_TOKEN
+#after_success:
+#  - python slack_notifier.py --project $SERVICE --token $SLACK_TOKEN -s
 
 branches:
   only:
@@ -54,3 +54,13 @@ integrations:
         branches:
           only:
             - google-gcr-gke
+    notifications:
+      - integrationName: slack-cubeship
+        type: slack
+        recipients:
+            - "#shippable"
+        branches:
+          only:
+            - google-gcr-gke
+        on_success: always
+        on_failure: always
