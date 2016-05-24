@@ -14,9 +14,12 @@ env:
 
 build:
   pre_ci:
+    - SUDO=$(which sudo) && $SUDO apt-get update -qq && $SUDO apt-get install -y python-dev
+    - SUDO=$(which sudo) && $SUDO pip install --upgrade pip
     - SUDO=$(which sudo) && $SUDO pip install --upgrade awscli
     - docker build -t $REGISTRY_ACCOUNT/$SERVICE:latest .
     - node --version
+    - aws --version
     - mkdir -p ./shippable/testresults ./shippable/codecoverage
   pre_ci_boot:
     image_name: $REGISTRY_ACCOUNT/$SERVICE
