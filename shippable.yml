@@ -41,7 +41,7 @@ integrations:
     hub:
       - integrationName: shippable_aws
         type: ecr
-        region: us-west-1
+        region: us-west-2
         branches:
           only:
             - google-gcr-gke
