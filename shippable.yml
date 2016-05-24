@@ -39,9 +39,9 @@ build:
     - docker push $REGISTRY_ACCOUNT/$SERVICE:$BRANCH.$BUILD_NUMBER
 
 after_failure:
-  - python slack_notifier.py --project $PROJECT --org $SLACK_ORG --token $SLACK_TOKEN
+  - python slack_notifier.py --project $SERVICE --org $SLACK_ORG --token $SLACK_TOKEN
 after_success:
-  - python slack_notifier.py --project $PROJECT --org $SLACK_ORG --token $SLACK_TOKEN -s
+  - python slack_notifier.py --project $SERVICE --org $SLACK_ORG --token $SLACK_TOKEN -s
 
 branches:
   only:
