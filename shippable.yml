@@ -8,8 +8,8 @@ node_js:
 env:
   global:
     - SERVICE=micro-api
-    - PROJECT_ID=shippable-gke # Project ID for existing GCP project
-    - REGISTRY_ACCOUNT=gcr.io/$PROJECT_ID # image registry account name/location
+    - PROJECT_ID=shippable-aws # Project ID for existing GCP project
+    - REGISTRY_ACCOUNT=413045187232.dkr.ecr.us-west-2.amazonaws.com/$PROJECT_ID # image registry account name/location
     - XUNIT_FILE=./shippable/testresults/result.xml # location to store test results
 
 build:
@@ -35,13 +35,13 @@ build:
 
 branches:
   only:
-    - google-gcr-gke
+    - master
 
 integrations:
     hub:
-      - integrationName: GCR-shippable-gke
-        type: gcr
-        agent_only: true
+      - integrationName: shippable_aws
+        type: ecr
+        region: us-west-1
         branches:
           only:
-            - google-gcr-gke
+            - master
