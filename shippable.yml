@@ -44,4 +44,4 @@ integrations:
         region: us-west-1
         branches:
           only:
-            - master
+            - google-gcr-gke
