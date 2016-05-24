@@ -9,5 +9,4 @@ sudo apt-get remove python-pip
 sudo easy_install -U pip
 sudo pip install awscli
 # install node modules. the above mv will make this zip through as nothing new is installed
-#test
 npm install
