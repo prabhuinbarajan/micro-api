@@ -35,7 +35,7 @@ build:
 
 branches:
   only:
-    - master
+    - google-gcr-gke
 
 integrations:
     hub:
