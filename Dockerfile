@@ -1,4 +1,6 @@
 FROM aye0aye/micro-image:prod
+RUN pip install awscli
+
 
 # this folder must be created in the base images
 ADD . /root/micro-api/
